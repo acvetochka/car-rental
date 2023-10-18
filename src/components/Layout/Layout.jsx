@@ -1,23 +1,19 @@
 import { Suspense } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { Main, MainWrapper } from './Layout.styled';
+import SideBar from 'components/SideBar/SideBar';
 
 function Layout() {
   return (
-    <div>
-      <aside>
-        <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/catalog">Catalog</NavLink>
-          <NavLink to="/favorites">Favorites</NavLink>
-        </nav>
-      </aside>
-      <main>
+    <MainWrapper>
+      <SideBar />
+      <Main>
         <Suspense fallback={<div>Loading...</div>}>
           <Outlet />
         </Suspense>
-      </main>
+      </Main>
       {/* <footer>2023 | Alona Kuznietsova</footer> */}
-    </div>
+    </MainWrapper>
   );
 }
 
