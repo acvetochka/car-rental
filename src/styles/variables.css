@@ -1,0 +1,16 @@
+:root {
+    --accent-color: #3470FF;
+    --accent-hover: #0B44CD;
+    --primary-color: #121417;
+    --secondary-color: #12141780;
+    --label-color: #8A8A89;
+    --invert-color: #FFFFFF;
+    --select-color: #12141733;
+    --separator-color: #1214171A;
+
+    --bg-color: #FFFFFF;
+    --input-bg-color: #F7F7FB;
+
+    --condition-bg-color: #F9F9F9;
+    --condition-color: #363535;
+}
