@@ -4,6 +4,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background: linear-gradient(45deg, #EECFBA, #C5DDE8);; */
+  /* background: radial-gradient(40% 50%, #FAECD5, #CAE4D8); */
+  /* background: linear-gradient(to top, #93aceb 20%, #fdfdfd 50%, #93aceb 80%); */
 }
 body::-webkit-scrollbar {
   width: 2px;
@@ -35,21 +38,8 @@ p {
   padding: 0;
 }
 
-/* Скидання базових властивостей у списків (ul або клас .list) */
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-/* Властивості для коректного відображення зображень */
-/* img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-} */
-
-/* Свойства для обнуления курсива у address */
-address {
-  font-style: normal;
 }

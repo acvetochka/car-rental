@@ -1,7 +1,8 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Main, MainWrapper } from './Layout.styled';
+
 import SideBar from 'components/SideBar/SideBar';
+import { Main, MainWrapper } from './Layout.styled';
 
 function Layout() {
   return (

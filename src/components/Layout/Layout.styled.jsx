@@ -6,4 +6,6 @@ export const MainWrapper = styled.div`
 
 export const Main = styled.main`
   padding: 20px;
+  width: 100%;
+  text-align: center;
 `;

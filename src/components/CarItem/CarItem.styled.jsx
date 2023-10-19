@@ -12,13 +12,6 @@ export const Wrapper = styled.div`
 
 export const ImageWrapper = styled.div`
   border-radius: 14px;
-
-  background: linear-gradient(
-      180deg,
-      rgba(18, 20, 23, 0.5) 2.5%,
-      rgba(18, 20, 23, 0) 41.07%
-    ),
-    url(<path-to-image>), lightgray 50% / cover no-repeat;
   width: 274px;
   height: 268px;
   max-width: 100%;
@@ -45,15 +38,6 @@ export const ImageWrapper = styled.div`
       rgba(18, 20, 23, 0.5) 2.5%,
       rgba(18, 20, 23, 0) 41.07%
     );
-    /* #f3f3f2; */
-    /* background: linear-gradient(
-        180deg,
-        rgba(18, 20, 23, 0.5) 2.5%,
-        rgba(18, 20, 23, 0) 41.07%
-      ),
-      url(<path-to-image>), lightgray 69.5px 0px / 100.249% 100% no-repeat; */
-
-    /* opacity: 0.1; */
   }
 `;
 
@@ -104,6 +88,7 @@ export const Details = styled.p`
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 90%;
+  text-align: left;
 `;
 
 export const Separator = styled.span`

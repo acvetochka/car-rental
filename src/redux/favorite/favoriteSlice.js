@@ -9,7 +9,6 @@ const initialState = {
 const persistConfig = {
   key: 'favorites',
   storage,
-  //   whitelist: ['token'],
 };
 
 export const favoriteSlice = createSlice({

@@ -1,6 +1,6 @@
 /* manrope-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap; 
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
@@ -9,7 +9,7 @@
 }
 /* manrope-500 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap; 
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
@@ -18,7 +18,7 @@
 }
 /* manrope-600 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap; 
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;

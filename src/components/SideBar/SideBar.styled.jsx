@@ -14,7 +14,7 @@ export const Logo = styled.p`
   color: #0b5cc7;
   font-size: 40px;
   text-shadow: 0 1px 3px #6566c6, 0 2px 3px #7387e6, 0 3px 3px #8ca0d3,
-    0 4px 3px #bec6e9, 0 5px 3dvi #a9a6a6;
+    0 4px 3px #bec6e9, 0 5px 3px #a9a6a6;
 `;
 export const Navi = styled.nav`
   display: flex;

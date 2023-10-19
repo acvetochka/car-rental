@@ -1,4 +1,11 @@
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import ButtonOpenModal from 'components/ButtonOpenModal/ButtonOpenModal';
+import CarDescription from 'components/CarDescription/CarDescription';
+import { fetchCarById } from 'redux/cars/carsOperations';
+import { addFavorite, removeFavorite } from 'redux/favorite/favoriteSlice';
+import { selectFavorite } from 'redux/favorite/favoriteSelectors';
 import {
   Details,
   Icon,
@@ -11,13 +18,6 @@ import {
   TitleWrapper,
   Wrapper,
 } from './CarItem.styled';
-import { useState } from 'react';
-// import Modal from 'components/Modal/Modal';
-import { useDispatch } from 'react-redux';
-import { fetchCarById } from 'redux/cars/carsOperations';
-import CarDescription from 'components/CarDescription/CarDescription';
-import { addFavorite, removeFavorite } from 'redux/favorite/favoriteSlice';
-// import { BiHeart } from 'react-icons/bi';
 
 const CarItem = ({ car }) => {
   const {
@@ -27,51 +27,45 @@ const CarItem = ({ car }) => {
     model,
     type,
     img,
-    // description,
-    // fuelConsumption,
-    // engineSize,
-    // accessories,
     functionalities,
     rentalPrice,
     rentalCompany,
     address,
-    // rentalConditions,
-    // mileage,
   } = car;
-  // console.log(car);
-  //   console.log(car.car)
-  //   let companyAddress;
-  //   if (car) {
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
-
+  const { favoriteCars } = useSelector(selectFavorite);
   const dispatch = useDispatch();
+  const companyAddress = address.split(',');
+  const country = companyAddress[2];
+  const city = companyAddress[1];
+
+  useEffect(() => {
+    if (favoriteCars.some(favCar => favCar.id === car.id)) {
+      setIsFavorite(true);
+    }
+  }, [favoriteCars, car]);
 
   const openModal = () => {
     setIsModalOpen(true);
-    const newCar = dispatch(fetchCarById(car.id));
-    console.log(newCar);
+    dispatch(fetchCarById(car.id));
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
-  const companyAddress = address.split(',');
-  const country = companyAddress[2];
-  const city = companyAddress[1];
-
   const handleToFavorite = e => {
     e.stopPropagation();
     setIsFavorite(!isFavorite);
 
-    if (isFavorite) {
+    if (favoriteCars.some(favCar => favCar.id === car.id)) {
       dispatch(removeFavorite(car));
     } else {
       dispatch(addFavorite(car));
     }
   };
-  //   }
 
   return (
     <Wrapper>
