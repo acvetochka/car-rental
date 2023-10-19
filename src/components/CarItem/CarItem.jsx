@@ -72,9 +72,9 @@ const CarItem = ({ car }) => {
       <ImageWrapper onClick={openModal}>
         <IconWrapper onClick={handleToFavorite}>
           {isFavorite ? (
-            <IconFavorite width={18} height={18} />
+            <IconFavorite width={20} height={20} />
           ) : (
-            <Icon width={18} height={18} />
+            <Icon width={20} height={20} />
           )}
         </IconWrapper>
         <Image src={img} alt={model} width="274" height="268" />

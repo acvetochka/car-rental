@@ -45,6 +45,8 @@ export const IconWrapper = styled.div`
   position: absolute;
   top: 14px;
   right: 14px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   transition: transform 250ms ease-in-out;
 
@@ -55,10 +57,14 @@ export const IconWrapper = styled.div`
 
 export const Icon = styled(BiHeart)`
   fill: #ffffff;
+  width: 100%;
+  height: 100%;
 `;
 
 export const IconFavorite = styled(BiSolidHeart)`
   fill: var(--accent-color);
+  width: 100%;
+  height: 100%;
 `;
 
 export const Image = styled.img`
