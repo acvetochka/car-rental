@@ -1,8 +1,9 @@
 import ButtonLoadMore from 'components/ButtonLoadMore/ButtonLoadMore';
 import CarsList from 'components/CarsList/CarsList';
+import Filter from 'components/Filter/Filter';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {  fetchFirstPage } from 'redux/cars/carsOperations';
+import { fetchFirstPage } from 'redux/cars/carsOperations';
 import { selectCars } from 'redux/cars/carsSelectors';
 
 const Catalog = () => {
@@ -18,19 +19,17 @@ const Catalog = () => {
     }
   }, [dispatch, page]);
 
-
   return (
     <section>
+      <Filter />
       <CarsList carsArray={cars} />
-      {
-        showButton && (
-          <ButtonLoadMore
-            page={page}
-            setPage={setPage}
-            setShowButton={setShowButton}
-          />
-        )
-      }
+      {showButton && (
+        <ButtonLoadMore
+          page={page}
+          setPage={setPage}
+          setShowButton={setShowButton}
+        />
+      )}
     </section>
   );
 };

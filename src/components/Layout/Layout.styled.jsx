@@ -8,4 +8,5 @@ export const Main = styled.main`
   padding: 20px;
   width: 100%;
   text-align: center;
+  margin: 0 auto;
 `;
