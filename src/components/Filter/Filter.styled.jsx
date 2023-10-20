@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { NumericFormat } from 'react-number-format';
 // import Select from 'react-select';
 
 export const FilterForm = styled.form`
@@ -6,6 +7,7 @@ export const FilterForm = styled.form`
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 18px;
 `;
 
@@ -42,11 +44,32 @@ export const Label = styled.p`
   top: 15px;
 `;
 
-export const Input = styled.input`
+export const Input = styled(NumericFormat)`
   padding-left: ${props => props.padding};
   width: 160px;
   height: 48px;
   background-color: var(--input-bg-color);
   border: none;
   outline: none;
+`;
+
+export const SearchButton = styled.button`
+  align-self: end;
+  padding: 14px 44px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: var(--accent-color);
+  color: var(--invert-color);
+  transition: background-color 250ms ease-in-out;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: var(--accent-hover);
+  }
+  &:disabled {
+    background-color: var(--secondary-color);
+    opacity: 0.8;
+    cursor: auto;
+  }
 `;

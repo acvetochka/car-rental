@@ -1,16 +1,29 @@
+import { createOptions } from 'helpers/createOptions';
 import { Label, SelectInput, SelectWrapper } from './Select.styled';
+import makes from 'makes.json';
+import { priceArray } from 'helpers/priceOptions';
+import { removeDuplicatesAndSort } from 'helpers/removeDuplicatesAndSort';
 
-const Select = ({ textLabel, name, options, width, handleChange, value }) => {
+const Select = ({ textLabel, name, width, handleChange, value, brand }) => {
+  const sortMakes = removeDuplicatesAndSort(makes);
+  const brandOptions = createOptions(sortMakes);
+  const priceOptions = createOptions(priceArray);
+
   return (
     <SelectWrapper width={width}>
       <Label htmlFor={name}>{textLabel}</Label>
       <SelectInput
         id={name}
-        options={options}
+        // options={options}
+        options={brand ? brandOptions : priceOptions}
+        // options={brandOptions}
+        // value={valueBrand}
         // defaultValue={defaultValue}
         className="custom-select custom-select-menu"
-        closeMenuOnSelect={false}
+        // isClearable
+        // closeMenuOnSelect={false}
         onChange={handleChange}
+        // inputValue={value}
         value={value}
         styles={{
           dropdownIndicator: (base, state) => ({

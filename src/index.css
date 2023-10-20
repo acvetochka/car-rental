@@ -1,5 +1,6 @@
 body {
-  margin: 0;
+  width: 1440px;
+  margin: 0 auto;
   font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -7,6 +8,12 @@ body {
   /* background: linear-gradient(45deg, #EECFBA, #C5DDE8);; */
   /* background: radial-gradient(40% 50%, #FAECD5, #CAE4D8); */
   /* background: linear-gradient(to top, #93aceb 20%, #fdfdfd 50%, #93aceb 80%); */
+}
+
+@media screen and (max-width: 768px) {
+  body{
+ width: 768px;
+ }
 }
 body::-webkit-scrollbar {
   width: 2px;

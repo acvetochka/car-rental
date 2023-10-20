@@ -37,3 +37,15 @@ export const fetchCarById = createAsyncThunk(
     }
   }
 );
+
+export const fetchAllCarsForFilter = createAsyncThunk(
+  'adverts/fetchForFilter',
+  async (_, thunkAPI) => {
+    try {
+      const response = await axios.get('/adverts');
+      return response.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);

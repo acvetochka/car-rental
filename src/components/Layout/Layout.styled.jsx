@@ -6,7 +6,8 @@ export const MainWrapper = styled.div`
 
 export const Main = styled.main`
   padding: 20px;
-  width: 100%;
+  width: 1440px;
   text-align: center;
   margin: 0 auto;
+  padding-left: 200px;
 `;

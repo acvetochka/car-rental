@@ -1,5 +1,11 @@
-import makes from 'makes.json';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 
+import {
+  //   fetchAllCarsForFilter,
+  fetchFirstPage,
+} from 'redux/cars/carsOperations';
+import Select from './Select/Select';
 import {
   FilterForm,
   Input,
@@ -8,46 +14,100 @@ import {
   LabelMileage,
   Mileage,
   MileageWrapper,
+  SearchButton,
 } from './Filter.styled';
-import Select from './Select/Select';
-import { creatOptions } from 'helpers/createOptions';
-import { priceArray } from 'helpers/priceOptions';
-import { useState } from 'react';
+import { setFilter } from 'redux/filter/filterSlice';
 
-const Filter = () => {
-  const [selectedValue, setSelectedValue] = useState({
-    value: 'price',
+const Filter = ({ setFilterCars, setFiltering, setShowButton }) => {
+  const [valuePrice, setValuePrice] = useState({
+    value: '',
     label: 'To $',
   });
   const [valueBrand, setValueBrand] = useState({
-    value: 'brand',
+    value: '',
     label: 'Enter the text',
   });
+  const [price, setPrice] = useState('');
+  const [isDisabled, setIsDisabled] = useState(true);
+  const [mileageMin, setMileageMin] = useState('');
+  const [mileageMax, setMileageMax] = useState('');
+  const dispatch = useDispatch();
 
-  const brandOptions = creatOptions(makes);
-  const priceOptions = creatOptions(priceArray);
-  const [value, setValue] = useState('');
+  useEffect(() => {
+    if (
+      valueBrand.label !== 'Enter the text' ||
+      valuePrice.label !== 'To $' ||
+      mileageMin !== '' ||
+      mileageMax !== ''
+    ) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    }
+  }, [valueBrand, valuePrice, mileageMin, mileageMax]);
 
   const handleChangePrice = selectedOption => {
     const formattedValue = `To ${selectedOption.value}$`;
-    setSelectedValue({ label: formattedValue, value: formattedValue });
+    setValuePrice({ label: formattedValue, value: formattedValue });
+    setPrice(selectedOption.value);
   };
 
   const handleChangeBrand = selectedOption => {
-    setValueBrand({ label: selectedOption.value, value: selectedOption.value });
+    setValueBrand({
+      label: selectedOption.value,
+      value: selectedOption.value,
+    });
   };
 
   const handleChangeMileage = e => {
     const newValue = e.target.value;
-    setValue(newValue);
+    switch (e.target.name) {
+      case 'mileageMin':
+        setMileageMin(newValue);
+        break;
+      case 'mileageMax':
+        setMileageMax(newValue);
+        break;
+      default:
+        break;
+    }
+  };
+
+  const handleSearchClick = async e => {
+    e.preventDefault();
+    const newFilterQuery = {
+      make: valueBrand.value.toLowerCase().trim(),
+      price: price || '500',
+      mileageMin: mileageMin.split(',').join('') || 0,
+      mileageMax: mileageMax.split(',').join('') || 99999,
+    };
+    dispatch(setFilter(newFilterQuery));
+    setFiltering(true);
+  };
+
+  const handleClearClick = e => {
+    e.preventDefault();
+    dispatch(fetchFirstPage());
+    setFiltering(false);
+    setValuePrice({
+      value: '',
+      label: 'To $',
+    });
+    setValueBrand({
+      value: '',
+      label: 'Enter the text',
+    });
+    setMileageMin('');
+    setMileageMax('');
+    setShowButton(true);
   };
 
   return (
     <FilterForm>
       <Select
         textLabel="Car brand"
-        name="brand"
-        options={brandOptions}
+        name="make"
+        brand
         value={valueBrand}
         handleChange={handleChangeBrand}
         width={'224px'}
@@ -55,8 +115,7 @@ const Filter = () => {
       <Select
         textLabel="Price/ 1 hour"
         name="price"
-        options={priceOptions}
-        value={selectedValue}
+        value={valuePrice}
         handleChange={handleChangePrice}
         width={'125px'}
       />
@@ -66,21 +125,39 @@ const Filter = () => {
           <InputWrapper>
             <Label>From</Label>
             <Input
-              type="text"
-              name=""
+              value={mileageMin}
+              name="mileageMin"
               id="fromMileage"
+              format="##,###"
+              maxLength={6}
+              decimalScale={3}
+              thousandSeparator={true}
               onChange={handleChangeMileage}
-              //   value={value}
-              value={value}
               padding="65px"
             />
           </InputWrapper>
           <InputWrapper>
             <Label>To</Label>
-            <Input type="text" name="" id="toMileage" padding="45px" />
+            <Input
+              name="mileageMax"
+              id="toMileage"
+              padding="45px"
+              format="##,###"
+              maxLength={6}
+              decimalScale={3}
+              thousandSeparator={true}
+              value={mileageMax}
+              onChange={handleChangeMileage}
+            />
           </InputWrapper>
         </Mileage>
       </MileageWrapper>
+      <SearchButton onClick={handleSearchClick} disabled={isDisabled}>
+        Search
+      </SearchButton>
+      <SearchButton onClick={handleClearClick} disabled={isDisabled}>
+        Clear
+      </SearchButton>
     </FilterForm>
   );
 };

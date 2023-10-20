@@ -1,8 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchCars, fetchFirstPage } from './carsOperations';
+import {
+  fetchAllCarsForFilter,
+  fetchCars,
+  fetchFirstPage,
+} from './carsOperations';
 
 const initialState = {
   cars: [],
+  filterCars: [],
   isLoading: false,
   error: null,
 };
@@ -26,9 +31,18 @@ const handleFetchCarsFulfilled = (state, action) => {
   state.cars = [...state.cars, ...action.payload];
 };
 
+// const handleAllCarsFilterFulfilled = (state, action) => {
+
+// }
+
 export const carsSlice = createSlice({
   name: 'cars',
   initialState,
+  // reducers: {
+  //   addFilter: (state, { payload }) => {
+  //     state.cars = payload;
+  //   },
+  // },
   extraReducers: builder =>
     builder
       .addCase(fetchFirstPage.pending, handlePending)
@@ -36,8 +50,11 @@ export const carsSlice = createSlice({
       .addCase(fetchFirstPage.rejected, handleRejected)
       .addCase(fetchCars.pending, handlePending)
       .addCase(fetchCars.fulfilled, handleFetchCarsFulfilled)
-      .addCase(fetchCars.rejected, handleRejected),
+      .addCase(fetchCars.rejected, handleRejected)
+      .addCase(fetchAllCarsForFilter.pending, handlePending)
+      .addCase(fetchAllCarsForFilter.fulfilled, handleFirstPageFulfilled)
+      .addCase(fetchAllCarsForFilter.rejected, handleRejected),
 });
 
-
+// export const { addFilter } = carsSlice.actions;
 export const carsReducer = carsSlice.reducer;
