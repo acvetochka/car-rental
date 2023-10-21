@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       HomePage
-      <img src={fon} alt="" />
+      <img src={fon} alt="five cars" />
     </div>
   );
 };

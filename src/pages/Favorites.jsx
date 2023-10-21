@@ -13,10 +13,6 @@ const Favorites = () => {
         <CarsList carsArray={favoriteCars} />
       ) : (
         <NoCarsSection />
-        // <p>
-        //   "Oops, there's nothing here. Go to the catalog to add cars to your
-        //   favorites.
-        // </p>
       )}
     </section>
   );

@@ -48,7 +48,18 @@ const Catalog = () => {
         setFiltering={setFiltering}
         setShowButton={setShowButton}
       />
-      <CarsList carsArray={filtering ? filterCars : cars} />
+      {filtering ? (
+        filterCars.length === 0 ? (
+          <p>
+            Oops, nothing found here. Try changing your search parameters...
+          </p>
+        ) : (
+          <CarsList carsArray={filterCars} />
+        )
+      ) : (
+        <CarsList carsArray={cars} />
+      )}
+
       {!filtering &&
         (isLoading ? (
           <div>Loading cars...</div>

@@ -41,5 +41,10 @@ export const CloseButton = styled.button`
   outline: none;
   font-size: 24px;
   padding: 0;
+  transition: color 250px ease-in-out;
+
+  :hover {
+    color: var(--accent-color);
+  }
 `;
 

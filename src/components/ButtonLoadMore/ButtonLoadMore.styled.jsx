@@ -9,4 +9,9 @@ export const Button = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: color 250ms ease-in-out;
+
+  :hover {
+    color: var(--accent-hover);
+  }
 `;
