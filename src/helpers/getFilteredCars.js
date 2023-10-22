@@ -3,7 +3,7 @@ export const getFilteredCars = (payload, filter) => {
   const filteredCars = payload.filter(
     ({ make, rentalPrice, mileage }) =>
       make.toLowerCase() === filter.make &&
-      pars(rentalPrice) < filter.price &&
+      pars(rentalPrice) <= filter.price &&
       mileage > filter.mileageMin &&
       mileage < filter.mileageMax
   );

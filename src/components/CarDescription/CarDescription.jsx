@@ -1,3 +1,4 @@
+import ButtonRentalCar from 'components/ButtonRentalCar/ButtonRentalCar';
 import Modal from '../Modal/Modal';
 import {
   Image,
@@ -94,7 +95,8 @@ const CarDescription = ({ isModalOpen, closeModal, car }) => {
             </ConditionItem>
           </Conditions>
         </DescWrapper>
-        <Button to="tel:+380730000000">Rental car</Button>
+        <ButtonRentalCar text="Rental Car" />
+        {/* <Button to="tel:+380730000000">Rental car</Button> */}
       </ModalContent>
     </Modal>
   );

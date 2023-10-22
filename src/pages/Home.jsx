@@ -1,11 +1,13 @@
-import fon from 'assets/fon.png';
+import HomeDescription from 'components/HomeDescription/HomeDescription';
+import Section from 'components/Section/Section';
+import Title from 'components/Title/Title';
 
 const Home = () => {
   return (
-    <div>
-      HomePage
-      <img src={fon} alt="five cars" />
-    </div>
+    <Section>
+      <Title title="Welcome to our Car Rental Service!" />
+      <HomeDescription />
+    </Section>
   );
 };
 
