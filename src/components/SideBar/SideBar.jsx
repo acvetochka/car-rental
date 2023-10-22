@@ -1,4 +1,3 @@
-// import { NavLink } from 'react-router-dom';
 import { Aside, Link, Logo, Navi } from './SideBar.styled';
 
 const SideBar = () => {

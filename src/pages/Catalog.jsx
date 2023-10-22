@@ -23,10 +23,7 @@ const Catalog = () => {
 
   useEffect(() => {
     if (page === 1) {
-      // (async () => {
-      //   await
       dispatch(fetchFirstPage());
-      // })();
       setShowButton(true);
     }
   }, [dispatch, page]);
@@ -44,7 +41,6 @@ const Catalog = () => {
   return (
     <section>
       <Filter
-        setFilterCars={setFilterCars}
         setFiltering={setFiltering}
         setShowButton={setShowButton}
       />

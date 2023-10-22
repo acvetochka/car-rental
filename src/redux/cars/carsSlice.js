@@ -31,18 +31,10 @@ const handleFetchCarsFulfilled = (state, action) => {
   state.cars = [...state.cars, ...action.payload];
 };
 
-// const handleAllCarsFilterFulfilled = (state, action) => {
-
-// }
 
 export const carsSlice = createSlice({
   name: 'cars',
   initialState,
-  // reducers: {
-  //   addFilter: (state, { payload }) => {
-  //     state.cars = payload;
-  //   },
-  // },
   extraReducers: builder =>
     builder
       .addCase(fetchFirstPage.pending, handlePending)
@@ -56,5 +48,4 @@ export const carsSlice = createSlice({
       .addCase(fetchAllCarsForFilter.rejected, handleRejected),
 });
 
-// export const { addFilter } = carsSlice.actions;
 export const carsReducer = carsSlice.reducer;

@@ -18,6 +18,7 @@ import {
   TitleWrapper,
   Wrapper,
 } from './CarItem.styled';
+import PropTypes from 'prop-types';
 
 const CarItem = ({ car }) => {
   const {
@@ -104,6 +105,10 @@ const CarItem = ({ car }) => {
       )}
     </Wrapper>
   );
+};
+
+CarItem.propTypes = {
+  car: PropTypes.object,
 };
 
 export default CarItem;

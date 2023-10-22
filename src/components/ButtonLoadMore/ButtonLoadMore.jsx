@@ -1,4 +1,6 @@
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import { fetchCars } from 'redux/cars/carsOperations';
 import { Button } from './ButtonLoadMore.styled';
 
@@ -16,6 +18,12 @@ const ButtonLoadMore = ({ page, setPage, setShowButton }) => {
   };
 
   return <Button onClick={handleLoadMore}>Load more</Button>;
+};
+
+ButtonLoadMore.propTypes = {
+  page: PropTypes.number.isRequired,
+  setPage: PropTypes.func.isRequired,
+  setShowButton: PropTypes.func.isRequired,
 };
 
 export default ButtonLoadMore;

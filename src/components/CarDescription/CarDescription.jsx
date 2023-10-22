@@ -1,5 +1,8 @@
+import PropTypes from 'prop-types';
+
 import ButtonRentalCar from 'components/ButtonRentalCar/ButtonRentalCar';
 import Modal from '../Modal/Modal';
+import { formatNumberWithCommas } from 'helpers/formatNumberWithCommas';
 import {
   Image,
   ModalContent,
@@ -13,9 +16,7 @@ import {
   DescTitle,
   Conditions,
   ConditionItem,
-  Button,
 } from './CarDescription.styled';
-import { formatNumberWithCommas } from 'helpers/formatNumberWithCommas';
 
 const CarDescription = ({ isModalOpen, closeModal, car }) => {
   const {
@@ -96,10 +97,15 @@ const CarDescription = ({ isModalOpen, closeModal, car }) => {
           </Conditions>
         </DescWrapper>
         <ButtonRentalCar text="Rental Car" />
-        {/* <Button to="tel:+380730000000">Rental car</Button> */}
       </ModalContent>
     </Modal>
   );
+};
+
+Modal.propTypes = {
+  isModalOpen: PropTypes.bool,
+  closeModal: PropTypes.func,
+  car: PropTypes.object,
 };
 
 export default CarDescription;
