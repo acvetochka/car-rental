@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcar_rental=self.webpackChunkcar_rental||[]).push([[765],{5099:function(e,a,n){n.r(a),n.d(a,{default:function(){return t}});var c=n.p+"static/media/fon.cfac5b5b58f4a5eb7b93.png",r=n(184),t=function(){return(0,r.jsxs)("div",{children:["HomePage",(0,r.jsx)("img",{src:c,alt:"five cars"})]})}}}]);
-//# sourceMappingURL=765.70f89150.chunk.js.map
