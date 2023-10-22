@@ -577,7 +577,7 @@
     "make": "Volvo",
     "model": "XC60",
     "type": "SUV",
-    "img": "https://res.cloudinary.com/ditdqzoio/image/upload/v1687252635/cars/volvo_xc60_2.jpg",
+    "img": "https://res.cloudinary.com/dwkxo0asx/image/upload/v1697976479/2020-volvo-xc60-t5-momentum-4wd-suv-angular-front_rckanj.avif",
     "description": "The Volvo XC60 is a luxurious and versatile SUV that combines Scandinavian design, advanced safety features, and a comfortable driving experience, making it an ideal choice for families and adventure enthusiasts.",
     "fuelConsumption": "8.5",
     "engineSize": "2.0L 4-cylinder",
@@ -830,5 +830,109 @@
     "address": "654 Example Circle, Zaporizhzhia, Ukraine",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and proof of insurance required",
     "mileage": 4870
+  },
+  {
+    "id": 9718,
+    "year": 2018,
+    "make": "Land Rover",
+    "model": "Range Rover Sport",
+    "type": "SUV",
+    "img": "https://res.cloudinary.com/dwkxo0asx/image/upload/v1697986774/Range-Rover-Sport-SVR-2018-blau-_itowsh.jpg",
+    "description": "The Land Rover Range Rover Sport is a premium SUV that offers a perfect blend of luxury, off-road capability, and dynamic performance, providing a refined driving experience both on and off the road.",
+    "fuelConsumption": "11.8",
+    "engineSize": "3.0L V6",
+    "accessories": [
+      "Premium Windsor leather seats",
+      "Meridian surround sound system",
+      "Adaptive Dynamics suspension"
+    ],
+    "functionalities": [
+      "All-Wheel Drive",
+      "Terrain Response 2 system",
+      "Power-operated gesture tailgate"
+    ],
+    "rentalPrice": "$200",
+    "rentalCompany": "Luxury SUV Rentals",
+    "address": "654 Example Street, Lviv, Ukraine",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit and insurance required",
+    "mileage": 5600
+  },
+  {
+    "id": 9730,
+    "year": 2016,
+    "make": "Kia",
+    "model": "Niro",
+    "type": "Sedan, Hatchback",
+    "img": "https://res.cloudinary.com/dwkxo0asx/image/upload/v1697986913/kia_niro_881710_oniscp.jpg",
+    "description": "The Kia Niro is a versatile and fuel-efficient vehicle available in both sedan and hatchback body styles, offering a comfortable cabin, modern features, and a smooth driving experience, making it an attractive choice for urban commuters.",
+    "fuelConsumption": "6.2",
+    "engineSize": "1.6L 4-cylinder",
+    "accessories": [
+      "Apple CarPlay and Android Auto integration",
+      "Smart Key with Push Button Start",
+      "Automatic climate control"
+    ],
+    "functionalities": [
+      "Front-Wheel Drive",
+      "Electronic Stability Control",
+      "Rearview camera"
+    ],
+    "rentalPrice": "$50",
+    "rentalCompany": "Economy Car Rentals",
+    "address": "321 Example Lane, Kharkiv, Ukraine",
+    "rentalConditions": "Minimum age: 21\nValid driver's license\nSecurity deposit and insurance required",
+    "mileage": 6234
+  },
+  {
+    "id": 9797,
+    "year": 2015,
+    "make": "GMC",
+    "model": "Sierra",
+    "type": "SUV",
+    "img": "https://res.cloudinary.com/dwkxo0asx/image/upload/v1697987179/2014-GMC-Sierra-Light-Duty-Pickup-0024_zkttjs.jpg",
+    "description": "The GMC Sierra is a full-size luxury SUV that offers a powerful engine, a comfortable and spacious interior, and a host of advanced features.",
+    "fuelConsumption": "14.5",
+    "engineSize": "6.0L V8",
+    "accessories": [
+      "Heated and ventilated front seats",
+      "BOSE premium sound system",
+      "Power-folding third-row seats"
+    ],
+    "functionalities": [
+      "All-Wheel Drive",
+      "Adaptive suspension",
+      "Advanced safety features"
+    ],
+    "rentalPrice": "$100",
+    "rentalCompany": "Premium Car Rentals",
+    "address": "789 Example Square, Dnipro, Ukraine",
+    "rentalConditions": "Minimum age: 25\nValid driver's license\nSecurity deposit required",
+    "mileage": 3400
+  },
+  {
+    "id": 9798,
+    "year": 2018,
+    "make": "Hyundai",
+    "model": "Nexo",
+    "type": "SUV",
+    "img": "https://res.cloudinary.com/dwkxo0asx/image/upload/v1697987323/Hyundai_Nexo_2018_White_1_xpaxvj.jpg",
+    "description": "The Hyundai Nexo is a reliable and fuel-efficient SUV that combines practicality with a stylish design and a comfortable ride.",
+    "fuelConsumption": "8.2",
+    "engineSize": "2.0L 4-cylinder",
+    "accessories": [
+      "Apple CarPlay and Android Auto integration",
+      "Blind Spot Detection",
+      "Hands-free smart liftgate"
+    ],
+    "functionalities": [
+      "Front-Wheel Drive",
+      "Hillstart Assist Control",
+      "LED headlights"
+    ],
+    "rentalPrice": "$50",
+    "rentalCompany": "Economy Car Rentals",
+    "address": "456 Example Lane, Zaporizhzhia, Ukraine",
+    "rentalConditions": "Minimum age: 21\nValid driver's license\nCredit card required",
+    "mileage": 4570
   }
 ]
