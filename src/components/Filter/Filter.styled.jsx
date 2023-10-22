@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { NumericFormat } from 'react-number-format';
-// import Select from 'react-select';
 
 export const FilterForm = styled.form`
   margin: 0 auto;
@@ -10,11 +9,6 @@ export const FilterForm = styled.form`
   flex-wrap: wrap;
   gap: 18px;
 `;
-
-// export const SelectInput = styled(Select)`
-//   width: 224px;
-//   text-align: left;
-// `;
 
 export const MileageWrapper = styled.div`
   text-align: left;

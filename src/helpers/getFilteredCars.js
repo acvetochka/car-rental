@@ -7,6 +7,5 @@ export const getFilteredCars = (payload, filter) => {
       mileage > filter.mileageMin &&
       mileage < filter.mileageMax
   );
-  //   dispatch(addFilter(filteredCars));
   return filteredCars;
 };

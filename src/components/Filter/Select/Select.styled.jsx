@@ -12,19 +12,17 @@ export const Label = styled.label`
 `;
 
 export const SelectInput = styled(Select)`
-  /* border-radius: 14px;
-  background-color: var(--input-bg-color); */
   height: 48px;
   .custom-select-arrow {
-    transition: transform 0.5s; /* Анімація для зміни повороту */
+    transition: transform 0.5s; 
   }
 
   .custom-select.is-open .custom-select-arrow {
-    transform: rotate(180deg); /* Перевернути іконку при відкритті */
+    transform: rotate(180deg); 
   }
 
   .custom-select.is-open.custom-select-menu::-webkit-scrollbar {
-    width: 8px; /* Ширина скролбара */
+    width: 8px; 
     background-color: red;
   }
 
@@ -33,22 +31,4 @@ export const SelectInput = styled(Select)`
     border-radius: 14px;
     overflow: hidden;
   }
-
-  /* #react-select-2-listbox::-webkit-scrollbar-thumb {
-    background-color: red; 
-    border-radius: 4px; 
-  }
-
-  .custom-select.custom-select-menu::-webkit-scrollbar-track {
-    background: red !important; 
-  }
-
-  .custom-select.custom-select-menu::-webkit-scrollbar-thumb:active {
-    background-color: red; 
-  }
-
-  .custom-select.custom-select-menu::-webkit-scrollbar {
-    width: 8px;
-    background-color: red !important;
-  } */
 `;

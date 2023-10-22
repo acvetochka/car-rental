@@ -30,22 +30,6 @@ export const Link = styled.a`
   }
   :hover {
     color: var(--accent-hover);
-    /* text-decoration: underline; */
   }
 `;
 
-// export const LinkStyled = styled(Link)`
-//   position: relative;
-//   font-size: 12px;
-//   font-weight: 600;
-//   line-height: 14px;
-
-//   color: var(--accent-color);
-
-//   box-shadow: 0px 47px 355px 0px #00000012;
-
-//   /* ${min(tablet)} {
-//     font-size: 18px;
-//     line-height: 24px;
-//   } */
-// `;

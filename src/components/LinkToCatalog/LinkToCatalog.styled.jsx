@@ -8,8 +8,6 @@ export const Button = styled(NavLink)`
   border-radius: 12px;
   border: none;
   padding: 12px 44px;
-  /* width: 150px; */
-  /* max-width:  */
   margin-top: 28px;
   display: inline-block;
   cursor: pointer;

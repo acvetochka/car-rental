@@ -4,7 +4,6 @@ import { BiHeart, BiSolidHeart } from 'react-icons/bi';
 export const Wrapper = styled.div`
   width: 100%;
   display: flex;
-  /* flex-grow: 1; */
   flex-direction: column;
   min-height: 100%;
   justify-content: space-between;

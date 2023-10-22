@@ -15,7 +15,6 @@ function Layout() {
         </Suspense>
       </Main>
       <Footer />
-      {/* <footer>2023 | Alona Kuznietsova</footer> */}
     </MainWrapper>
   );
 }

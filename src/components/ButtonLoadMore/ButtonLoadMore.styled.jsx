@@ -6,7 +6,6 @@ export const Button = styled.button`
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  /* text-decoration: underline; */
   background-color: transparent;
   border: none;
   padding: 0;
@@ -35,6 +34,5 @@ export const Button = styled.button`
   }
   :hover {
     color: var(--accent-hover);
-    /* text-decoration: underline; */
   }
 `;
