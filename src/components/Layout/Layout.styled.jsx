@@ -12,5 +12,5 @@ export const Main = styled.main`
   width: 1440px;
   text-align: center;
   margin: 0 auto;
-  padding-left: 200px;
+  /* padding-left: 200px; */
 `;
