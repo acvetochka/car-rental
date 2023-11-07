@@ -8,9 +8,15 @@ export const MainWrapper = styled.div`
 `;
 
 export const Main = styled.main`
-  padding: 50px;
-  width: 1440px;
+  padding-top: 100px;
+  max-width: 1440px;
   text-align: center;
   margin: 0 auto;
+  padding-bottom: 30px;
   /* padding-left: 200px; */
+`;
+
+export const Container = styled.div`
+  /* max-width: 1440px; */
+  padding: 0 20px;
 `;

@@ -1,12 +1,15 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
-export const Aside = styled.header`
+export const Header = styled.header`
+  /* max-width: 1440px; */
+  border-bottom: 1px solid var(--separator-color);
   padding: 20px;
   /* width: 200px; */
+  margin: 0 auto;
   width: 100%;
   height: 80px;
-  position: fixed;
+  /* position: absolute; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +32,7 @@ export const Logo = styled.p`
 export const Navi = styled.nav`
   display: flex;
   /* flex-direction: column; */
-  gap: 20px;
+  gap: 50px;
   /* padding-top: 30px; */
 `;
 

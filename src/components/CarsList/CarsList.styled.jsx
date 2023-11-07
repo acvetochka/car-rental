@@ -8,7 +8,7 @@ export const List = styled.ul`
   list-style: none;
   margin: 0 auto;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 `;
 
 export const ListItem = styled.li`
