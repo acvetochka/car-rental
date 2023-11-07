@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const FooterStyle = styled.footer`
   text-align: center;
   padding: 20px;
-  padding-left: 120px;
+  /* padding-left: 120px; */
   border-top: 1px solid var(--separator-color);
 `;
 

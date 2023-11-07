@@ -17,7 +17,7 @@ export const Header = styled.header`
   z-index: 999;
 `;
 
-export const Logo = styled.p`
+export const Logo = styled(NavLink)`
   /* text-transform: uppercase;
   text-shadow: 0 1px 0 #cac8c8, 0 2px 0 #c7c5c5, 0 3px 0 #bbbaba,
     0 4px 0 #b7b6b6, 0 5px 0 #a9a6a6; */
@@ -37,11 +37,34 @@ export const Navi = styled.nav`
 `;
 
 export const Link = styled(NavLink)`
-  font-size: 20px;
+  position: relative;
+  font-size: 18px;
+  /* color: var(--accent-color); */
+  transition: color 250ms ease-in-out, text-decoration 250ms ease-in-out;
+  &:after {
+    content: '';
+    background: none repeat scroll 0 0 transparent;
+    bottom: -1px;
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: var(--accent-hover);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  &:hover:after {
+    width: 100%;
+    left: 0;
+  }
   :hover {
+    color: var(--accent-hover);
+  }
+
+  /* :hover {
     color: var(--accent-color);
     font-weight: 500;
-  }
+  } */
 
   &.active {
     color: var(--accent-color);

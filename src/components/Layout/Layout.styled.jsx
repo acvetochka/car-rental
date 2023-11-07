@@ -8,11 +8,12 @@ export const MainWrapper = styled.div`
 `;
 
 export const Main = styled.main`
-  padding-top: 100px;
+  padding-top: 30px;
   max-width: 1440px;
   text-align: center;
   margin: 0 auto;
   padding-bottom: 30px;
+  flex-grow: 1;
   /* padding-left: 200px; */
 `;
 

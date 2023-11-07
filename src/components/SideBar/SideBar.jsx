@@ -5,7 +5,7 @@ const SideBar = () => {
   return (
     <Header>
       {/* <Container> */}
-      <Logo>Car Rental</Logo>
+      <Logo to="/">Car Rental</Logo>
       <Navi>
         <Link to="/">Home</Link>
         <Link to="/catalog">Catalog</Link>
