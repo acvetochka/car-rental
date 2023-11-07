@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { persistor, store } from 'redux/store';
 import 'modern-normalize/modern-normalize.css';
+import './styles/loader.css';
 import './styles/variables.css';
 import './styles/fonts.css';
 import './index.css';

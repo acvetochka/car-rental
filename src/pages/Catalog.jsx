@@ -11,6 +11,7 @@ import {
 import { selectCars } from 'redux/cars/carsSelectors';
 import { selectFilter } from 'redux/filter/filterSelectors';
 import { getFilteredCars } from 'helpers/getFilteredCars';
+import Loader from 'components/Loader/Loader';
 
 const Catalog = () => {
   const dispatch = useDispatch();
@@ -40,10 +41,7 @@ const Catalog = () => {
 
   return (
     <section>
-      <Filter
-        setFiltering={setFiltering}
-        setShowButton={setShowButton}
-      />
+      <Filter setFiltering={setFiltering} setShowButton={setShowButton} />
       {filtering ? (
         filterCars.length === 0 ? (
           <p>
@@ -58,7 +56,9 @@ const Catalog = () => {
 
       {!filtering &&
         (isLoading ? (
-          <div>Loading cars...</div>
+          // <div>
+            <Loader />
+          // </div>
         ) : (
           showButton && (
             <ButtonLoadMore
