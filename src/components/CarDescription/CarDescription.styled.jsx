@@ -3,13 +3,23 @@ import styled from '@emotion/styled';
 export const ModalContent = styled.div`
   padding: 40px;
   width: 541px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 export const Image = styled.img`
   object-fit: cover;
   border-radius: 14px;
   margin-bottom: 14px;
+
+  @media screen and (max-width: 768px) {
+    /* max-width: 768px; */
+    max-width: 100%;
+  }
 `;
+
 export const TitleWrapper = styled.p`
   font-size: 18px;
   font-weight: 500;

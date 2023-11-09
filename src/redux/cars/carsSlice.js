@@ -15,6 +15,7 @@ const initialState = {
 const handlePending = state => {
   state.isLoading = true;
 };
+
 const handleRejected = (state, action) => {
   state.isLoading = false;
   state.error = action.payload;
@@ -25,6 +26,7 @@ const handleFirstPageFulfilled = (state, action) => {
   state.error = null;
   state.cars = action.payload;
 };
+
 const handleFetchCarsFulfilled = (state, action) => {
   state.isLoading = false;
   state.error = null;

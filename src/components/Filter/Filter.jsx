@@ -15,6 +15,7 @@ import {
   MileageWrapper,
   SearchButton,
 } from './Filter.styled';
+import makes from 'makes.json';
 
 const Filter = ({ setFiltering, setShowButton }) => {
   const [valuePrice, setValuePrice] = useState({
@@ -74,7 +75,7 @@ const Filter = ({ setFiltering, setShowButton }) => {
   const handleSearchClick = async e => {
     e.preventDefault();
     const newFilterQuery = {
-      make: valueBrand.value.toLowerCase().trim(),
+      make: valueBrand.value.toLowerCase().trim() || '',
       price: price || '500',
       mileageMin: mileageMin.split(',').join('') || 0,
       mileageMax: mileageMax.split(',').join('') || 99999,
