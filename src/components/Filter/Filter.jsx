@@ -15,7 +15,6 @@ import {
   MileageWrapper,
   SearchButton,
 } from './Filter.styled';
-import makes from 'makes.json';
 
 const Filter = ({ setFiltering, setShowButton }) => {
   const [valuePrice, setValuePrice] = useState({
