@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/car-rental/static/css/main.111bf13d.css",
-    "main.js": "/car-rental/static/js/main.cce05026.js",
+    "main.js": "/car-rental/static/js/main.61b12572.js",
     "static/js/628.cb4b7d5c.chunk.js": "/car-rental/static/js/628.cb4b7d5c.chunk.js",
-    "static/js/274.4fa60e8d.chunk.js": "/car-rental/static/js/274.4fa60e8d.chunk.js",
-    "static/js/433.729c2a81.chunk.js": "/car-rental/static/js/433.729c2a81.chunk.js",
+    "static/js/274.2373ffcf.chunk.js": "/car-rental/static/js/274.2373ffcf.chunk.js",
+    "static/js/433.4df40b88.chunk.js": "/car-rental/static/js/433.4df40b88.chunk.js",
     "static/js/218.139f0cd6.chunk.js": "/car-rental/static/js/218.139f0cd6.chunk.js",
     "static/js/80.060e0af4.chunk.js": "/car-rental/static/js/80.060e0af4.chunk.js",
     "static/media/fon.png": "/car-rental/static/media/fon.7c2f62fe76d04e1450c2.png",
@@ -17,15 +17,15 @@
     "static/media/manrope-v15-latin-500.woff2": "/car-rental/static/media/manrope-v15-latin-500.b6bf3db6256270076d37.woff2",
     "index.html": "/car-rental/index.html",
     "main.111bf13d.css.map": "/car-rental/static/css/main.111bf13d.css.map",
-    "main.cce05026.js.map": "/car-rental/static/js/main.cce05026.js.map",
+    "main.61b12572.js.map": "/car-rental/static/js/main.61b12572.js.map",
     "628.cb4b7d5c.chunk.js.map": "/car-rental/static/js/628.cb4b7d5c.chunk.js.map",
-    "274.4fa60e8d.chunk.js.map": "/car-rental/static/js/274.4fa60e8d.chunk.js.map",
-    "433.729c2a81.chunk.js.map": "/car-rental/static/js/433.729c2a81.chunk.js.map",
+    "274.2373ffcf.chunk.js.map": "/car-rental/static/js/274.2373ffcf.chunk.js.map",
+    "433.4df40b88.chunk.js.map": "/car-rental/static/js/433.4df40b88.chunk.js.map",
     "218.139f0cd6.chunk.js.map": "/car-rental/static/js/218.139f0cd6.chunk.js.map",
     "80.060e0af4.chunk.js.map": "/car-rental/static/js/80.060e0af4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.111bf13d.css",
-    "static/js/main.cce05026.js"
+    "static/js/main.61b12572.js"
   ]
 }
