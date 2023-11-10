@@ -8,6 +8,7 @@ export const Nav = styled(motion.nav)`
   bottom: 0;
   width: ${props => props.width};
   height: ${props => props.height};
+  overflow: hidden;
 `;
 
 export const Wrapper = styled(motion.div)`
