@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import { useMediaQuery } from 'react-responsive';
 
 import { Backdrop, Container, CloseButton } from './Modal.styled';
 import { IoCloseOutline } from 'react-icons/io5';
 
 const Modal = ({ isOpen, onClose, children }) => {
-
+  const isMobile = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
   const handleBackdropClick = event => {
     if (event.target === event.currentTarget) {
       onClose();
@@ -37,8 +40,12 @@ const Modal = ({ isOpen, onClose, children }) => {
       <Container
         id="modal-container"
         key="modal"
-        isOpen={isOpen}
-        initial={{ opacity: 0, x: '-50%', y: '-50%', scale: 0 }}
+        // isOpen={isOpen}
+        initial={
+          isMobile
+            ? { opacity: 0, x: '-50%', y: 0, scale: 0 }
+            : { opacity: 0, x: '-50%', y: '-50%', scale: 0 }
+        }
         animate={isOpen ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
         exit={{ opacity: 0, scale: 0 }}
         transition={{ duration: 0.5 }}

@@ -1,10 +1,17 @@
 import styled from '@emotion/styled';
+import { max, tablet } from 'styles/media';
 
 export const ModalContent = styled.div`
   padding: 40px;
   width: 541px;
 
-  @media screen and (max-width: 768px) {
+  ${max(500)} {
+    padding: 20px;
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
+  }
+
+  ${max(tablet)} {
     max-width: 100%;
   }
 `;
@@ -14,12 +21,17 @@ export const Image = styled.img`
   border-radius: 14px;
   margin-bottom: 14px;
 
-  @media screen and (max-width: 768px) {
-    /* max-width: 768px; */
+  ${max(tablet)} {
     max-width: 100%;
   }
 `;
 
+export const TextWrapper = styled.div`
+  ${max(tablet)} {
+    overflow-y: auto;
+    height: 30vh;
+  }
+`;
 export const TitleWrapper = styled.p`
   font-size: 18px;
   font-weight: 500;

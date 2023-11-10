@@ -6,6 +6,7 @@ import { formatNumberWithCommas } from 'helpers/formatNumberWithCommas';
 import {
   Image,
   ModalContent,
+  TextWrapper,
   TitleWrapper,
   Span,
   Description,
@@ -50,52 +51,54 @@ const CarDescription = ({ isModalOpen, closeModal, car }) => {
     <Modal isOpen={isModalOpen} onClose={closeModal}>
       <ModalContent>
         <Image src={img} alt={model} width="461" height="248" />
-        <TitleWrapper>
-          {make} <Span>{model}</Span>, {year}
-        </TitleWrapper>
-        <DetailsWrapper>
-          <Details>
-            <DetailItem>{city}</DetailItem>
-            <DetailItem>{country}</DetailItem>
-            <DetailItem>id: {id}</DetailItem>
-            <DetailItem>Year: {year}</DetailItem>
-            <DetailItem>Type: {type}</DetailItem>
-          </Details>
-          <Details>
-            <DetailItem>Fuel Consumption: {fuelConsumption}</DetailItem>
-            <DetailItem>EngineSize: {engineSize}</DetailItem>
-          </Details>
-        </DetailsWrapper>
-        <Description>{description}</Description>
-        <DescWrapper>
-          <DescTitle>Accessories and functionalities:</DescTitle>
-          <Details>
-            {accessories.map((acces, idx) => (
-              <DetailItem key={idx}>{acces}</DetailItem>
-            ))}
-          </Details>
-          <Details>
-            {functionalities.map((func, idx) => (
-              <DetailItem key={idx}>{func}</DetailItem>
-            ))}
-          </Details>
-        </DescWrapper>
-        <DescWrapper>
-          <DescTitle>Rental Conditions: </DescTitle>
-          <Conditions>
-            <ConditionItem>
-              {textMinAge} <Span>{age}</Span>
-            </ConditionItem>
-            <ConditionItem>{conditions[1]}</ConditionItem>
-            <ConditionItem>{conditions[2]}</ConditionItem>
-            <ConditionItem>
-              Mileage: <Span>{mileageFormat}</Span>
-            </ConditionItem>
-            <ConditionItem>
-              Price: <Span>{rentalPrice.slice(1)}$</Span>
-            </ConditionItem>
-          </Conditions>
-        </DescWrapper>
+        <TextWrapper>
+          <TitleWrapper>
+            {make} <Span>{model}</Span>, {year}
+          </TitleWrapper>
+          <DetailsWrapper>
+            <Details>
+              <DetailItem>{city}</DetailItem>
+              <DetailItem>{country}</DetailItem>
+              <DetailItem>id: {id}</DetailItem>
+              <DetailItem>Year: {year}</DetailItem>
+              <DetailItem>Type: {type}</DetailItem>
+            </Details>
+            <Details>
+              <DetailItem>Fuel Consumption: {fuelConsumption}</DetailItem>
+              <DetailItem>EngineSize: {engineSize}</DetailItem>
+            </Details>
+          </DetailsWrapper>
+          <Description>{description}</Description>
+          <DescWrapper>
+            <DescTitle>Accessories and functionalities:</DescTitle>
+            <Details>
+              {accessories.map((acces, idx) => (
+                <DetailItem key={idx}>{acces}</DetailItem>
+              ))}
+            </Details>
+            <Details>
+              {functionalities.map((func, idx) => (
+                <DetailItem key={idx}>{func}</DetailItem>
+              ))}
+            </Details>
+          </DescWrapper>
+          <DescWrapper>
+            <DescTitle>Rental Conditions: </DescTitle>
+            <Conditions>
+              <ConditionItem>
+                {textMinAge} <Span>{age}</Span>
+              </ConditionItem>
+              <ConditionItem>{conditions[1]}</ConditionItem>
+              <ConditionItem>{conditions[2]}</ConditionItem>
+              <ConditionItem>
+                Mileage: <Span>{mileageFormat}</Span>
+              </ConditionItem>
+              <ConditionItem>
+                Price: <Span>{rentalPrice.slice(1)}$</Span>
+              </ConditionItem>
+            </Conditions>
+          </DescWrapper>
+        </TextWrapper>
         <ButtonRentalCar text="Rental Car" />
       </ModalContent>
     </Modal>
