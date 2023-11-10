@@ -60,8 +60,8 @@ export const CloseButton = styled.button`
   }
 
   ${max(500)} {
-    top: 6px;
-    right: 6px;
+    top: 4px;
+    right: 4px;
   }
 `;
 

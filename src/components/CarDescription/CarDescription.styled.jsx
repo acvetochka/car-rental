@@ -14,6 +14,20 @@ export const ModalContent = styled.div`
   ${max(tablet)} {
     max-width: 100%;
   }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--separator-color);
+    border-radius: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--select-color);
+    border-radius: 12px;
+  }
 `;
 
 export const Image = styled.img`
@@ -27,9 +41,24 @@ export const Image = styled.img`
 `;
 
 export const TextWrapper = styled.div`
+  margin-bottom: 24px;
   ${max(tablet)} {
     overflow-y: auto;
-    height: 30vh;
+    height: 45vh;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--separator-color);
+    border-radius: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--select-color);
+    border-radius: 12px;
   }
 `;
 export const TitleWrapper = styled.p`
@@ -73,7 +102,7 @@ export const Description = styled.p`
 `;
 
 export const DescWrapper = styled.div`
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
 `;
 export const DescTitle = styled.p`
   margin-bottom: 8px;
