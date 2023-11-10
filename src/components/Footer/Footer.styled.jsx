@@ -15,7 +15,7 @@ export const Link = styled.a`
   position: relative;
   font-size: 18px;
   color: var(--accent-color);
-  transition: color 250ms ease-in-out, text-decoration 250ms ease-in-out;
+  transition: color 500ms ease-in-out, text-decoration 500ms ease-in-out;
   &:after {
     content: '';
     background: none repeat scroll 0 0 transparent;
@@ -25,7 +25,7 @@ export const Link = styled.a`
     left: 50%;
     position: absolute;
     background: var(--accent-hover);
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    transition: width 500ms ease 0s, left 500ms ease 0s;
     width: 0;
   }
   &:hover:after {

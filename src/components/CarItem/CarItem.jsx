@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { AnimatePresence } from 'framer-motion';
 
 import ButtonOpenModal from 'components/ButtonOpenModal/ButtonOpenModal';
 import CarDescription from 'components/CarDescription/CarDescription';
@@ -96,13 +97,15 @@ const CarItem = ({ car }) => {
         <Separator> | </Separator> {functionalities[0]}
       </Details>
       <ButtonOpenModal car={car} onClick={openModal} />
-      {isModalOpen && (
-        <CarDescription
-          isModalOpen={isModalOpen}
-          closeModal={closeModal}
-          car={car}
-        />
-      )}
+      <AnimatePresence>
+        {isModalOpen && (
+          <CarDescription
+            isModalOpen={isModalOpen}
+            closeModal={closeModal}
+            car={car}
+          />
+        )}
+      </AnimatePresence>
     </Wrapper>
   );
 };

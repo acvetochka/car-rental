@@ -10,7 +10,7 @@ export const Button = styled.button`
   border: none;
   padding: 0;
   cursor: pointer;
-  transition: color 250ms ease-in-out;
+  transition: color 500ms ease-in-out;
 
   :hover {
     color: var(--accent-hover);
@@ -25,7 +25,7 @@ export const Button = styled.button`
     left: 50%;
     position: absolute;
     background: var(--accent-hover);
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    transition: width 500ms ease 0s, left 500ms ease 0s;
     width: 0;
   }
   &:hover:after {

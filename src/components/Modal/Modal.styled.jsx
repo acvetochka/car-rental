@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -10,7 +11,6 @@ export const Container = styled.div`
   border-radius: 24px;
   box-shadow: 0px 4px 57px 0px rgba(17, 17, 17, 0.05);
   z-index: 1000;
-  transition: transform 250ms ease-in-out;
 `;
 
 export const Backdrop = styled.div`
@@ -21,11 +21,10 @@ export const Backdrop = styled.div`
   height: 100%;
   background-color: #12141780;
   z-index: 999;
-  transition: transform 250ms ease-in-out;
 `;
 
 export const Content = styled.div`
-  background-color: white;
+  background-color: var(--bg-color);
   width: 541px;
   padding: 20px;
   border-radius: 5px;
@@ -41,7 +40,7 @@ export const CloseButton = styled.button`
   outline: none;
   font-size: 24px;
   padding: 0;
-  transition: color 250px ease-in-out;
+  transition: color 500px ease-in-out;
 
   :hover {
     color: var(--accent-color);

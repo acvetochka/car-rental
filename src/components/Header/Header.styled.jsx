@@ -32,7 +32,7 @@ export const Navi = styled.nav`
 export const Link = styled(NavLink)`
   position: relative;
   font-size: 20px;
-  transition: color 250ms ease-in-out, text-decoration 250ms ease-in-out;
+  transition: color 500ms ease-in-out, text-decoration 500ms ease-in-out;
   &:after {
     content: '';
     background: none repeat scroll 0 0 transparent;
@@ -42,7 +42,7 @@ export const Link = styled(NavLink)`
     left: 50%;
     position: absolute;
     background: var(--accent-hover);
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    transition: width 500ms ease 0s, left 500ms ease 0s;
     width: 0;
   }
   &:hover:after {

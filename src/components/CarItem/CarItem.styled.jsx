@@ -16,7 +16,7 @@ export const ImageWrapper = styled.div`
   max-width: 100%;
   overflow: hidden;
   position: relative;
-  transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+  transition: transform 500ms ease-in-out, box-shadow 500ms ease-in-out;
   cursor: pointer;
   margin-bottom: 14px;
 
@@ -47,7 +47,7 @@ export const IconWrapper = styled.div`
   width: 20px;
   height: 20px;
   cursor: pointer;
-  transition: transform 250ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 
   &:hover {
     transform: scale(1.5);

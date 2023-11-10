@@ -54,7 +54,7 @@ export const SearchButton = styled.button`
   border-radius: 12px;
   background-color: var(--accent-color);
   color: var(--invert-color);
-  transition: background-color 250ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
   cursor: pointer;
   border: none;
 

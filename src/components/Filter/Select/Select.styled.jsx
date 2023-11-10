@@ -13,16 +13,17 @@ export const Label = styled.label`
 
 export const SelectInput = styled(Select)`
   height: 48px;
+
   .custom-select-arrow {
-    transition: transform 0.5s; 
+    transition: transform 0.5s;
   }
 
   .custom-select.is-open .custom-select-arrow {
-    transform: rotate(180deg); 
+    transform: rotate(180deg);
   }
 
   .custom-select.is-open.custom-select-menu::-webkit-scrollbar {
-    width: 8px; 
+    width: 8px;
     background-color: red;
   }
 

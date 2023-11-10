@@ -6,6 +6,7 @@ import { Backdrop, Container, CloseButton } from './Modal.styled';
 import { IoCloseOutline } from 'react-icons/io5';
 
 const Modal = ({ isOpen, onClose, children }) => {
+
   const handleBackdropClick = event => {
     if (event.target === event.currentTarget) {
       onClose();
@@ -33,7 +34,15 @@ const Modal = ({ isOpen, onClose, children }) => {
   }
   return ReactDOM.createPortal(
     <Backdrop onClick={handleBackdropClick}>
-      <Container id="modal-container">
+      <Container
+        id="modal-container"
+        key="modal"
+        isOpen={isOpen}
+        initial={{ opacity: 0, x: '-50%', y: '-50%', scale: 0 }}
+        animate={isOpen ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
+        exit={{ opacity: 0, scale: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <CloseButton onClick={onClose}>
           <IoCloseOutline width={24} height={24} />
         </CloseButton>
