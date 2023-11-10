@@ -1,9 +1,16 @@
 import { motion } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 
 import carLogo from 'assets/rental-car-logo.png';
-import { HeaderStyles, Link, Logo, LogoImg, Navi } from './Header.styled';
+import { HeaderStyles, Logo, LogoImg } from './Header.styled';
+import MobileMenu from 'components/MobileMenu/MobileMenu';
+import Navigation from 'components/Navigation/Navigation';
 
 const Header = () => {
+  const isMobile = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
+
   return (
     <HeaderStyles>
       <motion.div
@@ -13,19 +20,10 @@ const Header = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         <Logo to="/">
-          <LogoImg
-            src={carLogo}
-            alt="logo"
-            width="200"
-            height="80"
-          />
+          <LogoImg src={carLogo} alt="logo" width="200" height="80" />
         </Logo>
       </motion.div>
-      <Navi>
-        <Link to="/">Home</Link>
-        <Link to="/catalog">Catalog</Link>
-        <Link to="/favorites">Favorites</Link>
-      </Navi>
+      {isMobile ? <MobileMenu /> : <Navigation />}
     </HeaderStyles>
   );
 };
