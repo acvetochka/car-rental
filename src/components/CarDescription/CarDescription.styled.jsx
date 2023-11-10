@@ -7,11 +7,11 @@ export const ModalContent = styled.div`
 
   ${max(500)} {
     padding: 20px;
-    max-height: calc(100vh - 30px);
-    overflow-y: auto;
   }
 
   ${max(tablet)} {
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
     max-width: 100%;
   }
 
@@ -44,7 +44,7 @@ export const TextWrapper = styled.div`
   margin-bottom: 24px;
   ${max(tablet)} {
     overflow-y: auto;
-    height: 45vh;
+    max-height: 45vh;
   }
 
   &::-webkit-scrollbar {
