@@ -12,5 +12,5 @@ export const Text = styled.p`
 `;
 
 export const Image = styled.img`
-  margin-top: 80px;
+  margin-top: 30px;
 `;

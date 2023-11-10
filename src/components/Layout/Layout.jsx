@@ -1,17 +1,17 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import SideBar from 'components/SideBar/SideBar';
-import { Container, Main, MainWrapper } from './Layout.styled';
 import Footer from 'components/Footer/Footer';
 import Loader from 'components/Loader/Loader';
+import Header from 'components/Header/Header';
+import { Container, Main, MainWrapper } from './Layout.styled';
 
 function Layout() {
   return (
     <MainWrapper>
-      <Container>
-        <SideBar />
-      </Container>
+      {/* <Container> */}
+      <Header />
+      {/* </Container> */}
       <Main>
         <Container>
           <Suspense fallback={<Loader />}>

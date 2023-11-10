@@ -1,15 +1,19 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
-export const Header = styled.header`
-  /* max-width: 1440px; */
-  border-bottom: 1px solid var(--separator-color);
+export const HeaderStyles = styled.header`
+  /* border-bottom: 1px solid var(--separator-color); */
+  /* box-shadow: 1px 1px 1px var(--accent-color); */
+  /* box-shadow: 0px 10px 13px -7px var(--accent-color),
+    4px 6px 15px 0px rgba(0, 0, 0, 0); */
+  /* box-shadow: 0px 10px 20px -10px var(--accent-color),
+    4px 6px 15px 0px rgba(0, 0, 0, 0); */
+  box-shadow: 0px 10px 30px -10px var(--separator-color);
+  border-radius: 8px;
   padding: 20px;
-  /* width: 200px; */
   margin: 0 auto;
   width: 100%;
   height: 80px;
-  /* position: absolute; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,16 +22,16 @@ export const Header = styled.header`
 `;
 
 export const Logo = styled(NavLink)`
-  /* text-transform: uppercase;
-  text-shadow: 0 1px 0 #cac8c8, 0 2px 0 #c7c5c5, 0 3px 0 #bbbaba,
-    0 4px 0 #b7b6b6, 0 5px 0 #a9a6a6; */
   margin: 0;
   text-transform: uppercase;
   color: #0b5cc7;
   font-size: 40px;
-  text-shadow: 0 1px 3px #6566c6, 0 2px 3px #7387e6, 0 3px 3px #8ca0d3,
-    0 4px 3px #bec6e9, 0 5px 3px #a9a6a6;
-  /* margin-bottom: 30px; */
+  text-shadow: 0 1px 3px #6566c6, 0 2px 3px #7387e6, 0 3px 3px #8ca0d3;
+`;
+
+export const LogoImg = styled.img`
+  max-width: 100%;
+  max-height: 100%;
 `;
 export const Navi = styled.nav`
   display: flex;
