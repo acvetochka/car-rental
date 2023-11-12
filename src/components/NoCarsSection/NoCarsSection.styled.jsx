@@ -5,3 +5,7 @@ export const Section = styled.section`
   flex-direction: column;
   align-items: center;
 `;
+
+export const Image = styled.img`
+  max-width: 100%;
+`;
