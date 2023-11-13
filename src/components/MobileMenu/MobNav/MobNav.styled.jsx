@@ -11,14 +11,26 @@ export const NavList = styled(motion.ul)`
   display: flex;
   flex-direction: column;
   gap: 50px;
-  align-items: center;
+  align-items: flex-start;
+`;
+export const NavItem = styled.li`
+  :hover {
+    color: var(--accent-hover);
+  }
 `;
 
-export const NavItem = styled(motion(NavLink))`
-  position: relative;
+export const Link = styled(motion(NavLink))`
   font-size: 28px;
-  transition: color 500ms ease-in-out, text-decoration 500ms ease-in-out;
-  &:after {
+  transition: color 500ms ease-in-out, text-decoration 500ms ease-in-out,
+    scale 500ms ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  p {
+    position: relative;
+  }
+  p:after {
     content: '';
     background: none repeat scroll 0 0 transparent;
     bottom: -1px;
@@ -30,15 +42,18 @@ export const NavItem = styled(motion(NavLink))`
     transition: width 500ms ease 0s, left 500ms ease 0s;
     width: 0;
   }
-  &:hover:after {
-    width: 100%;
-    left: 0;
-  }
-  :hover {
-    color: var(--accent-hover);
-  }
 
   &.active {
     color: var(--accent-color);
   }
+
+  &:hover {
+    color: var(--accent-hover);
+  }
+  &:hover > p:after {
+    width: 100%;
+    left: 0;
+  }
 `;
+
+

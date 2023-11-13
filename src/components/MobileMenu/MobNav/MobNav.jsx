@@ -1,4 +1,9 @@
-import { NavItem, NavList } from './MobNav.styled';
+import { Link, NavItem, NavList } from './MobNav.styled';
+import {
+  HiOutlineDocumentMagnifyingGlass,
+  HiOutlineHome,
+} from 'react-icons/hi2';
+import { AiOutlineHeart } from 'react-icons/ai';
 
 const variantsLink = {
   open: {
@@ -39,15 +44,22 @@ const menu = [
 export const MobNav = ({ onClose }) => (
   <NavList variants={variants}>
     {menu.map(({ id, name, src }) => (
-      <NavItem
-        key={id}
-        variants={variantsLink}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        to={src}
-        onClick={onClose}
-      >
-        {name}
+      <NavItem>
+        <Link
+          key={id}
+          variants={variantsLink}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          exit={{ scale: 1 }}
+          to={src}
+          onClick={onClose}
+        >
+          {id === 1 && <HiOutlineHome width={20} height={20} />}
+          {id === 2 && <HiOutlineDocumentMagnifyingGlass />}
+          {id === 3 && <AiOutlineHeart />}
+
+          <p>{name}</p>
+        </Link>
       </NavItem>
     ))}
   </NavList>

@@ -30,7 +30,7 @@ const ButtonScrollToTop = () => {
           type="button"
           show={`${showButton}`}
           onClick={toTop}
-          animate={{ scale: [1, 1.2, 1] }}
+          animate={{ scale: [1, 1.1, 1] }}
           transition={{
             duration: 2,
             ease: 'easeInOut',

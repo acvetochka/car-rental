@@ -1,11 +1,25 @@
-const { Navi, Link } = require('./Navigation.styled');
+import {
+  HiOutlineDocumentMagnifyingGlass,
+  HiOutlineHome,
+} from 'react-icons/hi2';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { Link, Navi } from './Navigation.styled';
 
 const Navigation = () => {
   return (
     <Navi>
-      <Link to="/">Home</Link>
-      <Link to="/catalog">Catalog</Link>
-      <Link to="/favorites">Favorites</Link>
+      <Link to="/">
+        <HiOutlineHome />
+        <p>Home</p>
+      </Link>
+      <Link to="/catalog">
+        <HiOutlineDocumentMagnifyingGlass />
+        <p>Catalog</p>
+      </Link>
+      <Link to="/favorites">
+        <AiOutlineHeart />
+        <p>Favorites</p>
+      </Link>
     </Navi>
   );
 };

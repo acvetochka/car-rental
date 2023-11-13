@@ -40,7 +40,6 @@ const Modal = ({ isOpen, onClose, children }) => {
       <Container
         id="modal-container"
         key="modal"
-        // isOpen={isOpen}
         initial={
           isMobile
             ? { opacity: 0, x: '-50%', y: 0, scale: 0 }

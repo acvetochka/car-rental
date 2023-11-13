@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 const sidebar = {
   open: (height = 500) => ({
-    clipPath: `circle( ${height * 2 + 200}px at 100% 0)`,
+    clipPath: `circle( ${height * 2 + 200}px at 100% 0px)`,
     transition: {
       type: 'spring',
       stiffness: 20,

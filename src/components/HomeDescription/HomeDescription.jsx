@@ -35,7 +35,7 @@ const HomeDescription = () => {
       </TextWrapper>
       {isMobile ? (
         <motion.div
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: 100, overflow: 'hidden' }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.15 }}
           viewport={{ once: true, amount: 0.2 }}
