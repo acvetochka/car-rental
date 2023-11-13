@@ -25,7 +25,9 @@ body::-webkit-scrollbar-thumb {
   background: #ffffff;
   border-radius: 12px;
 }
-
+* {
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
   color: inherit;

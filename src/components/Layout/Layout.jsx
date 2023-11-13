@@ -5,10 +5,12 @@ import Footer from 'components/Footer/Footer';
 import Loader from 'components/Loader/Loader';
 import Header from 'components/Header/Header';
 import { Container, Main, MainWrapper } from './Layout.styled';
+import ScrollToTop from 'components/ScrollToTop/ScrollToTop';
 
 function Layout() {
   return (
     <MainWrapper>
+      <ScrollToTop />
       {/* <Container> */}
       <Header />
       {/* </Container> */}

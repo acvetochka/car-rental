@@ -12,6 +12,7 @@ import { selectCars } from 'redux/cars/carsSelectors';
 import { selectFilter } from 'redux/filter/filterSelectors';
 import { getFilteredCars } from 'helpers/getFilteredCars';
 import Loader from 'components/Loader/Loader';
+import ButtonScrollToTop from 'components/ButtonScrollToTop/ButtonScrollToTop';
 
 const Catalog = () => {
   const dispatch = useDispatch();
@@ -56,9 +57,7 @@ const Catalog = () => {
 
       {!filtering &&
         (isLoading ? (
-          // <div>
-            <Loader />
-          // </div>
+          <Loader />
         ) : (
           showButton && (
             <ButtonLoadMore
@@ -68,6 +67,7 @@ const Catalog = () => {
             />
           )
         ))}
+      <ButtonScrollToTop />
     </section>
   );
 };

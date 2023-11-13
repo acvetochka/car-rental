@@ -1,0 +1,38 @@
+/* export const Button=styled.button` */
+.scroll-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    border: none;
+    color: var(--invert-color);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    visibility: hidden;
+    box-shadow: inset 0 0 0 4px var(--invert-color);
+    opacity: 0;
+    transition: 0.2s;
+    transform: translateY(25px);
+}
+
+.scroll-up::before {
+    content: '^';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+
+.scroll-up.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
