@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/car-rental/static/css/main.ff2d2ced.css",
-    "main.js": "/car-rental/static/js/main.8d3d5763.js",
-    "static/js/513.a7791852.chunk.js": "/car-rental/static/js/513.a7791852.chunk.js",
-    "static/js/477.b8ea8ed3.chunk.js": "/car-rental/static/js/477.b8ea8ed3.chunk.js",
-    "static/js/973.abf35073.chunk.js": "/car-rental/static/js/973.abf35073.chunk.js",
-    "static/js/218.77570a5b.chunk.js": "/car-rental/static/js/218.77570a5b.chunk.js",
+    "main.js": "/car-rental/static/js/main.4c3afcda.js",
+    "static/js/513.d3d9f742.chunk.js": "/car-rental/static/js/513.d3d9f742.chunk.js",
+    "static/js/477.51fbd433.chunk.js": "/car-rental/static/js/477.51fbd433.chunk.js",
+    "static/js/973.c8c79a1d.chunk.js": "/car-rental/static/js/973.c8c79a1d.chunk.js",
+    "static/js/218.a6b4b91a.chunk.js": "/car-rental/static/js/218.a6b4b91a.chunk.js",
     "static/js/136.78f7fa23.chunk.js": "/car-rental/static/js/136.78f7fa23.chunk.js",
     "static/media/fon.png": "/car-rental/static/media/fon.7c2f62fe76d04e1450c2.png",
     "static/media/car.png": "/car-rental/static/media/car.b7c218faf8ca500a06a0.png",
@@ -19,15 +19,15 @@
     "static/media/manrope-v15-latin-500.woff2": "/car-rental/static/media/manrope-v15-latin-500.b6bf3db6256270076d37.woff2",
     "index.html": "/car-rental/index.html",
     "main.ff2d2ced.css.map": "/car-rental/static/css/main.ff2d2ced.css.map",
-    "main.8d3d5763.js.map": "/car-rental/static/js/main.8d3d5763.js.map",
-    "513.a7791852.chunk.js.map": "/car-rental/static/js/513.a7791852.chunk.js.map",
-    "477.b8ea8ed3.chunk.js.map": "/car-rental/static/js/477.b8ea8ed3.chunk.js.map",
-    "973.abf35073.chunk.js.map": "/car-rental/static/js/973.abf35073.chunk.js.map",
-    "218.77570a5b.chunk.js.map": "/car-rental/static/js/218.77570a5b.chunk.js.map",
+    "main.4c3afcda.js.map": "/car-rental/static/js/main.4c3afcda.js.map",
+    "513.d3d9f742.chunk.js.map": "/car-rental/static/js/513.d3d9f742.chunk.js.map",
+    "477.51fbd433.chunk.js.map": "/car-rental/static/js/477.51fbd433.chunk.js.map",
+    "973.c8c79a1d.chunk.js.map": "/car-rental/static/js/973.c8c79a1d.chunk.js.map",
+    "218.a6b4b91a.chunk.js.map": "/car-rental/static/js/218.a6b4b91a.chunk.js.map",
     "136.78f7fa23.chunk.js.map": "/car-rental/static/js/136.78f7fa23.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ff2d2ced.css",
-    "static/js/main.8d3d5763.js"
+    "static/js/main.4c3afcda.js"
   ]
 }
