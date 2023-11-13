@@ -30,6 +30,7 @@ To start using our website, visit the [website link](https://acvetochka.github.i
   ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
   ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
   ![Emotion Styled](https://img.shields.io/badge/Emotion-D26AC2?style=for-the-badge)
+  ![Framer](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue)
   
 Additional libraries for UI and state management.
 
