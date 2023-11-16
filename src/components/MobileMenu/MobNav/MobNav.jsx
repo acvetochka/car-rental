@@ -44,9 +44,8 @@ const menu = [
 export const MobNav = ({ onClose }) => (
   <NavList variants={variants}>
     {menu.map(({ id, name, src }) => (
-      <NavItem>
+      <NavItem key={id}>
         <Link
-          key={id}
           variants={variantsLink}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
@@ -57,7 +56,6 @@ export const MobNav = ({ onClose }) => (
           {id === 1 && <HiOutlineHome width={20} height={20} />}
           {id === 2 && <HiOutlineDocumentMagnifyingGlass />}
           {id === 3 && <AiOutlineHeart />}
-
           <p>{name}</p>
         </Link>
       </NavItem>

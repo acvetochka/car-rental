@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
+import { max, tablet } from 'styles/media';
 
 export const Button = styled(NavLink)`
   background-color: var(--accent-color);
@@ -14,5 +15,10 @@ export const Button = styled(NavLink)`
 
   &:hover {
     background-color: var(--accent-hover);
+  }
+
+  ${max(tablet)} {
+    width: 100%;
+    padding: 18px 44px;
   }
 `;

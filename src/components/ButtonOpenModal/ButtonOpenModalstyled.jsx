@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { max, tablet } from 'styles/media';
 
 export const Button = styled.button`
   background-color: var(--accent-color);
@@ -13,5 +14,10 @@ export const Button = styled.button`
 
   &:hover {
     background-color: var(--accent-hover);
+  }
+
+  ${max(tablet)} {
+    width: 100%;
+    padding: 18px 44px;
   }
 `;
