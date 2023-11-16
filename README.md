@@ -1,18 +1,24 @@
 # Car Rental
-Welcome to Our Car Rental Website Repository
+Welcome to Car Rental Website Repository
 
-![Animate App](/public/readme/main-animate.gif)
-
-# About Our Website
+# About Website
 This website is built on the React framework, providing users with a simple and convenient way to rent cars. We have three main pages:
 
 - **Home**: Provides brief information about our service and allows users to browse available cars.
 
+![HomePage](/public/readme/car-home.png)
+
 - **Catalog**: The car catalog page where users can apply filters based on the car brand, maximum rental price, and mileage. Here, you'll find detailed information about available cars, their specifications, and costs.
+
+![CatalogPage](/public/readme/car-catalog.png)
 
 - **Favorites**: On this page, users can add cars to their favorites for later consideration and booking.
 
+![FavoritePage](/public/readme/car-favorite.png)
+
 # Website Features
+- **Responsive Design**: The application has a responsive design, allowing users to use it conveniently on various devices, including computers, tablets, and smartphones.
+
 - **Filtering**: We offer a convenient filter to quickly find cars based on brand, rental price, and mileage. This helps users find the perfect car that fits their needs.
 
 - **Add to Favorites**: Users can add cars they're interested in to their favorites, allowing them to make a more considered decision and place an order later.
