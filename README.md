@@ -1,7 +1,25 @@
 # Car Rental
 Welcome to Car Rental Website Repository
 
-# About Website
+## Project structure
+
+```plaintext
+ 📦 car-rental
+ ┣ 📂 public            
+ ┣ 📂 src
+     ┣ 📂 assets        # Static assets (images, fonts)
+     ┣ 📂 components        # Reusable UI components
+     ┣ 📂 helpers
+     ┣ 📂 pages
+     ┣ 📂 redux
+     ┣ 📂 styles        # Shared styles
+     ┣ 📂 data          # Static/local data (e.g., JSON)
+     ┣ 📜 index.css
+     ┗ 📜 index.js
+ ┗ 📜 README.md         # Project documentation
+```
+
+## About Website
 This website is built on the React framework, providing users with a simple and convenient way to rent cars. We have three main pages:
 
 - **Home**: Provides brief information about our service and allows users to browse available cars.
